@@ -1,0 +1,493 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutEvent.cshtml";
+}
+
+<h2>Index</h2>
+
+<div class="content-area">
+    <div id="main">
+        <!-- SLIDER -->
+        <section class="page-section no-padding background-img-slider">
+            <div class="container">
+                <div id="main-slider" class="owl-carousel owl-theme">
+                    <!-- Slide -->
+                    <!-- Slide -->
+                    <div class="item text-center slide6">
+                        <div class="caption">
+                            <div class="container">
+                                <div class="div-table">
+                                    <div class="div-cell">
+                                        <div class="div-table slider-content">
+                                            <div class="div-cell event-image">
+                                                <img src="~/EM/assets/img/preview/event-1a.jpg" alt="" />
+                                            </div>
+                                            <div class="div-cell">
+                                                <h3 class="caption-subtitle animated fadeInUp visible" data-animation="fadeInUp" data-animation-delay="300">Standart Event Name Here</h3>
+                                                <h2 class="caption-title animated fadeInDown visible" data-animation="fadeInDown" data-animation-delay="100">15 October at 20:00 - 22:00 on Manhattan / New York</h2>
+                                                <p class="caption-text">
+                                                    @*<a class="btn btn-theme animated flipInY visible" href="#" data-animation="flipInY" data-animation-delay="600"> Register Now</a>*@
+                                                    <!--
+                                                    -->
+                                                      </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /SLIDER -->
+    </div>
+    <!-- Featured Event -->
+    <section class="page-section color featured-line xs-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h1 class="section-title two-lines">
+                        <span data-animation="flipInY" data-animation-delay="300" class="icon-inner"><span class="fa-stack"><i class="fa rhex dark fa-stack-2x"></i><i class="fa fa-calendar fa-stack-1x"></i></span></span>
+                        <span data-animation="fadeInRight" data-animation-delay="500" class="title-inner"> What You Want <small>Find Best Event For You</small></span>
+                    </h1>
+                </div>
+                <div class="col-md-9">
+                    <form id="registration-form" name="registration-form" class="event-form" action="#" method="post">
+                        <div class="row">
+                            <div class="col-sm-12 form-alert"></div>
+                            <div class="col-sm-6 col-md-3">
+                                <div class="form-group selectpicker-wrapper with-icon">
+                                    <i class="fa fa-globe"></i>
+                                    <select class="selectpicker input-price" data-live-search="true" data-width="100%"
+                                            data-toggle="tooltip" title="Select Location">
+                                        <option>Select Location</option>
+                                       @{
+                                           foreach (var area in ViewBag.AreaList)
+                                           {
+                                               <option value="@area.AreaId">@area.Name</option>
+  
+                                           }
+                                       }
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <div class="form-group selectpicker-wrapper with-icon">
+                                    <i class="fa fa-bars"></i>
+                                    <select class="selectpicker input-price" data-live-search="true" data-width="100%"
+                                            data-toggle="tooltip" title="Select Type">
+                                        <option>Select Type</option>
+                                        @{
+                                            foreach (var type in ViewBag.EventTypeList)
+                                            {
+                                                <option value="@type.Id">@type.Name</option>  
+                                            }
+                                        }
+                                       
+                                        
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <div class="form-group selectpicker-wrapper with-icon">
+                                    <i class="fa fa-calendar"></i>
+                                    <input type="text" class="form-control datetimepicker" name="datetimepicker" placeholder="Select Date" />
+                                </div>
+                            </div>
+                            <div class="col-md-3 overflowed">
+                                <div class="form-group">
+                                    <button class="btn btn-theme submit-button" type="submit"> Find Event <i class="fa fa-arrow-circle-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Featured Event -->
+    <!-- PAGE -->
+    <section class="page-section light">
+        <div class="container">
+            <div class="row thumbnails info-thumbs clear">
+                <div class="col-sm-6 col-md-3" data-animation="fadeInUp" data-animation-delay="100">
+                    <div class="thumbnail no-border no-padding text-center">
+                        <div class="rehex">
+                            <div class="rehex-deg">
+                                <div class="rehex-deg">
+                                    <div class="rehex-inner">
+                                        <div class="caption-wrapper div-table">
+                                            <div class="caption-inner div-cell">
+                                                <p class="caption-buttons"><a href="#" class="btn caption-link"><i class="fa fa-calendar"></i></a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="caption">
+                            <h3 class="caption-title">7/24 Event avaliable</h3>
+                            <p class="caption-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed vel velit</p>
+                            <p class="caption-more"><a href="#" class="btn btn-theme">Details</a></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- -->
+                <div class="col-sm-6 col-md-3" data-animation="fadeInUp" data-animation-delay="300">
+                    <div class="thumbnail no-border no-padding text-center">
+                        <div class="rehex">
+                            <div class="rehex-deg">
+                                <div class="rehex-deg">
+                                    <div class="rehex-inner">
+                                        <div class="caption-wrapper div-table">
+                                            <div class="caption-inner div-cell">
+                                                <p class="caption-buttons"><a href="#" class="btn caption-link"><i class="fa fa-map-marker"></i></a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="caption">
+                            <h3 class="caption-title">Great Locations</h3>
+                            <p class="caption-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed vel velit</p>
+                            <p class="caption-more"><a href="#" class="btn btn-theme">Details</a></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- -->
+                <div class="col-sm-6 col-md-3" data-animation="fadeInUp" data-animation-delay="500">
+                    <div class="thumbnail no-border no-padding text-center">
+                        <div class="rehex">
+                            <div class="rehex-deg">
+                                <div class="rehex-deg">
+                                    <div class="rehex-inner">
+                                        <div class="caption-wrapper div-table">
+                                            <div class="caption-inner div-cell">
+                                                <p class="caption-buttons"><a href="#" class="btn caption-link"><i class="fa fa-users"></i></a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="caption">
+                            <h3 class="caption-title">More Then 200 Speakers</h3>
+                            <p class="caption-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed vel velit</p>
+                            <p class="caption-more"><a href="#" class="btn btn-theme">Details</a></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- -->
+                <div class="col-sm-6 col-md-3" data-animation="fadeInUp" data-animation-delay="700">
+                    <div class="thumbnail no-border no-padding text-center">
+                        <div class="rehex">
+                            <div class="rehex-deg">
+                                <div class="rehex-deg">
+                                    <div class="rehex-inner">
+                                        <div class="caption-wrapper div-table">
+                                            <div class="caption-inner div-cell">
+                                                <p class="caption-buttons"><a href="#" class="btn caption-link"><i class="fa fa-music"></i></a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="caption">
+                            <h3 class="caption-title">Lets Party After Event</h3>
+                            <p class="caption-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed vel velit</p>
+                            <p class="caption-more"><a href="#" class="btn btn-theme">Details</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /PAGE -->
+    <!-- PAGE -->
+    <section class="page-section">
+        <div class="container">
+            <div class="clear clearfix overflowed">
+                <div class="section-title pull-left" style="width: auto;">
+                    <span class="icon-inner"><span class="fa-stack"><i class="fa rhex fa-stack-2x"></i><i class="fa fa-star fa-stack-1x"></i></span></span>
+                </div>
+                <ul id="filtrable-events" class="filtrable clearfix">
+                    <li class="all"><a href="#" data-filter="*">All</a></li>
+                    <li class="festival current"><a href="#" data-filter=".festival">Festival</a></li>
+                    <li class="playground"><a href="#" data-filter=".playground">Playground</a></li>
+                    <li class="conferance"><a href="#" data-filter=".conference">Conference</a></li>
+                </ul>
+            </div>
+            <div class="row thumbnails events isotope isotope-items">
+                
+                
+                        @{
+                        foreach (var conference in ViewBag.ConferenceList)
+                        {
+                            <div class="col-md-3 col-sm-6 isotope-item conference">
+                                <div class="thumbnail no-border no-padding">
+                                    <div class="media">
+                          
+                                        <div class="date">
+                                            <span>255</span>
+                                            <span>Jan</span>
+                                        </div>
+                                        <img src="~/EM/assets/img/preview/hotel-1.jpg" alt="">
+                                        <div class="caption hovered"></div>
+                                    </div>
+                                    <div class="caption">
+                                        <h3 class="caption-title"><a href="#">@conference.EventName</a></h3>
+                                        <p class="caption-category"><i class="fa fa-file-text-o"></i> 15 October <i class="fa fa-map-marker"></i> Manhattan / New York</p>
+                                        <p class="caption-price">Tickets from $49,99</p>
+                                        <p class="caption-text">Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi.	</p>
+                                       @* <p class="caption-more"><a href="#" class="btn btn-theme">Tickets &amp; details</a></p>*@
+                                        <p class="caption-more">@Html.ActionLink("DETAILS","Details", "Home", new { @class = "btn btn-theme" ,@eventId="2"})</p>
+                                    </div>
+                                </div>
+                            </div>
+                       }
+                    }
+               
+                
+                @{
+                    foreach (var festival in ViewBag.FestivalList)
+                        {
+
+                            <div class="col-md-3 col-sm-6 isotope-item festival ">
+                                <div class="thumbnail no-border no-padding">
+                                    <div class="media">
+                                       
+                                        <div class="date">
+                                            <span>25</span>
+                                            <span>Jan</span>
+                                        </div>
+                                        <img src="~/EM/assets/img/preview/hotel-1.jpg" alt="">
+                                        <div class="caption hovered"></div>
+                                    </div>
+                                    <div class="caption">
+                                        <h3 class="caption-title"><a href="#">@festival.EventName</a></h3>
+                                        <p class="caption-category"><i class="fa fa-file-text-o"></i> 15 October <i class="fa fa-map-marker"></i> Manhattan / New York</p>
+                                        <p class="caption-price">Tickets from $49,99</p>
+                                        <p class="caption-text">Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi.	</p>
+                                        <p class="caption-more"><a href="#" class="btn btn-theme">Tickets &amp; details</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                 }
+                }
+                
+                
+                    @{
+    foreach (var playground in ViewBag.PlaygroundList)
+    {
+
+        <div class="col-md-3 col-sm-6 isotope-item  playground">
+            <div class="thumbnail no-border no-padding">
+                <div class="media">
+                 
+                    <div class="date">
+                        <span>25</span>
+                        <span>Jan</span>
+                    </div>
+                    <img src="~/EM/assets/img/preview/hotel-1.jpg" alt="">
+                    <div class="caption hovered"></div>
+                </div>
+                <div class="caption">
+                    <h3 class="caption-title"><a href="#">@playground.EventName</a></h3>
+                    <p class="caption-category"><i class="fa fa-file-text-o"></i> 15 October <i class="fa fa-map-marker"></i> Manhattan / New York</p>
+                    <p class="caption-price">Tickets from $49,99</p>
+                    <p class="caption-text">Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi.	</p>
+                    <p class="caption-more"><a href="#" class="btn btn-theme">Tickets &amp; details</a></p>
+                </div>
+            </div>
+        </div>
+
+    }
+}
+               
+            </div>
+            <div class="text-center margin-top">
+                @*<a data-animation="fadeInUp" data-animation-delay="100" href="EventList" class="btn btn-theme btn-theme-grey-dark btn-theme-md"><i class="fa fa-file-text-o"></i> See all events</a>*@
+                @Html.ActionLink("See all events", "EventList", "Home", new { @class = "btn btn-theme btn-theme-grey-dark btn-theme-md" })
+             </div>
+        </div>
+    </section>
+    <!-- /PAGE -->
+    <!-- PAGE -->
+    <!-- /PAGE -->
+    <!-- PAGE -->
+    <section class="page-section">
+        <div class="container">
+            <h1 class="section-title">
+                <span data-animation="flipInY" data-animation-delay="300" class="icon-inner"><span class="fa-stack"><i class="fa rhex fa-stack-2x"></i><i class="fa fa-h-square fa-stack-1x"></i></span></span>
+                <span data-animation="fadeInRight" data-animation-delay="500" class="title-inner">HOTELS <small> / dont forget book your room</small></span>
+            </h1>
+            <div class="thumbnails hotels">
+                <div class="carousel-slider">
+                    <div class="owl-carousel slide-4">
+                        <div>
+                            <div class="thumbnail no-border no-padding">
+                                <div class="media">
+                                    <img src="~/EM/assets/img/preview/hotel-1.jpg" alt="">
+                                    <div class="caption hovered">
+                                        <div class="caption-wrapper div-table">
+                                            <div class="caption-inner div-cell">
+                                                <p class="caption-buttons"><a href="#" class="btn btn-theme caption-link"><i class="fa fa-file-text"></i> Details</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="caption">
+                                    <h3 class="caption-title"><a href="#">Standard Hotel Name Here</a></h3>
+                                    <div class="caption-rating rating">
+                                        <span class="star"></span>
+                                        <!--
+                                        -->
+                                        <span class="star active"></span>
+                                        <!--
+                                        -->
+                                        <span class="star active"></span>
+                                        <!--
+                                        -->
+                                        <span class="star active"></span>
+                                        <!--
+                                        -->
+                                        <span class="star active"></span>
+                                    </div>
+                                    <p class="caption-text">Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi.</p>
+                                    <p class="caption-more"><a href="#" class="btn btn-theme">Book</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="thumbnail no-border no-padding">
+                                <div class="media">
+                                    <img src="~/EM/assets/img/preview/hotel-1.jpg" alt="">
+                                    <div class="caption hovered">
+                                        <div class="caption-wrapper div-table">
+                                            <div class="caption-inner div-cell">
+                                                <p class="caption-buttons"><a href="#" class="btn btn-theme caption-link"><i class="fa fa-file-text"></i> Details</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="caption">
+                                    <h3 class="caption-title"><a href="#">Standard Hotel Name Here</a></h3>
+                                    <div class="caption-rating rating">
+                                        <span class="star"></span>
+                                        <!--
+                                        -->
+                                        <span class="star active"></span>
+                                        <!--
+                                        -->
+                                        <span class="star active"></span>
+                                        <!--
+                                        -->
+                                        <span class="star active"></span>
+                                        <!--
+                                        -->
+                                        <span class="star active"></span>
+                                    </div>
+                                    <p class="caption-text">Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi.</p>
+                                    <p class="caption-more"><a href="#" class="btn btn-theme">Book</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="thumbnail no-border no-padding">
+                                <div class="media">
+                                    <img src="~/EM/assets/img/preview/hotel-1.jpg" alt="">
+                                    <div class="caption hovered">
+                                        <div class="caption-wrapper div-table">
+                                            <div class="caption-inner div-cell">
+                                                <p class="caption-buttons"><a href="#" class="btn btn-theme caption-link"><i class="fa fa-file-text"></i> Details</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="caption">
+                                    <h3 class="caption-title"><a href="#">Standard Hotel Name Here</a></h3>
+                                    <div class="caption-rating rating">
+                                        <span class="star"></span>
+                                        <!--
+                                        -->
+                                        <span class="star active"></span>
+                                        <!--
+                                        -->
+                                        <span class="star active"></span>
+                                        <!--
+                                        -->
+                                        <span class="star active"></span>
+                                        <!--
+                                        -->
+                                        <span class="star active"></span>
+                                    </div>
+                                    <p class="caption-text">Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi.</p>
+                                    <p class="caption-more"><a href="#" class="btn btn-theme">Book</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="thumbnail no-border no-padding">
+                                <div class="media">
+                                    <img src="~/EM/assets/img/preview/hotel-1.jpg" alt="">
+                                    <div class="caption hovered">
+                                        <div class="caption-wrapper div-table">
+                                            <div class="caption-inner div-cell">
+                                                <p class="caption-buttons"><a href="#" class="btn btn-theme caption-link"><i class="fa fa-file-text"></i> Details</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="caption">
+                                    <h3 class="caption-title"><a href="#">Standard Hotel Name Here</a></h3>
+                                    <div class="caption-rating rating">
+                                        <span class="star"></span>
+                                        <!--
+                                        -->
+                                        <span class="star active"></span>
+                                        <!--
+                                        -->
+                                        <span class="star active"></span>
+                                        <!--
+                                        -->
+                                        <span class="star active"></span>
+                                        <!--
+                                        -->
+                                        <span class="star active"></span>
+                                    </div>
+                                    <p class="caption-text">Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi.</p>
+                                    <p class="caption-more"><a href="#" class="btn btn-theme">Book</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center margin-top">
+                <a data-animation="fadeInUp" data-animation-delay="100" href="#" class="btn btn-theme btn-theme-grey-dark btn-theme-md"><i class="fa fa-h-square"></i>&nbsp; See all Hotels</a>
+            </div>
+        </div>
+    </section>
+    <!-- /PAGE -->
+    <!-- PAGE -->
+    <section class="page-section dark call-action">
+        <div class="container">
+            <div class="row div-table">
+                <div class="col-sm-12 col-md-10 div-cell">
+                    <h1 class="section-title">Create Your Own New Event</h1>
+                    <p class="font_roboto">Bring people together, or turn your passion into a business. Eventbrite gives you everything you need to host your best event yet.</p>
+                </div>
+                <div class="col-sm-12 col-md-2 purchase-now div-cell">
+                    <a href="#" class="btn btn-theme">SUBMIT EVENT</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /PAGE -->
+
+</div>

@@ -1,0 +1,2262 @@
+﻿@model EventManagementInformation.Models.EventInfo
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutEvent.cshtml";
+}
+
+<h2>Details</h2>
+ <!-- Content area -->
+<div class="content-area">
+    <section class="page-section image breadcrumbs overlay">
+        <div class="container">
+            @*<h1>EVENT DETAIL PAGE</h1>*@
+            <ul class="breadcrumb">
+                <li>@Html.ActionLink("Home","Index","Home")</li>
+                <li><a href="#">Events</a></li>
+                <li class="active">Event Detail </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- PAGE -->
+    <section class="page-section with-sidebar sidebar-right first-section light">
+        <div class="container">
+            <!-- Content -->
+            <section id="content" class="content col-sm-12 col-md-8 col-lg-9">
+                <div class="item"><img class="img-responsive" src="~/EM/assets/img/preview/img-slider-1.jpg" alt="" /></div>
+
+                @*<div class="owl-carousel img-carousel">
+                    <div class="item"><img class="img-responsive" src="~/EM/assets/img/preview/img-slider-1.jpg" alt="" /></div>
+                    <div class="item"><img class="img-responsive" src="~/EM/assets/img/preview/img-slider-1.jpg" alt="" /></div>
+                    <div class="item"><img class="img-responsive" src="~/EM/assets/img/preview/img-slider-1.jpg" alt="" /></div>
+                    <div class="item"><img class="img-responsive" src="~/EM/assets/img/preview/img-slider-1.jpg" alt="" /></div>
+                </div>*@
+                <!-- -->
+                <hr class="page-divider transparent half" />
+                <!-- -->
+                <h1 class="section-title">
+                    <span class="icon-inner"><span class="fa-stack"><i class="fa rhex fa-stack-2x"></i><i class="fa fa-star fa-stack-1x"></i></span></span>
+                    <span class="title-inner">@Model.EventName <small>/ </small></span>
+                </h1>
+                <p class="font_roboto font_size16">@Model.Details</p>
+                <p class="font_roboto font_size16">.</p>
+                <p class="btn-row">
+                    @*<a href="#" class="btn btn-theme btn-theme-xl scroll-to">Register <i class="fa fa-arrow-circle-right"></i></a>*@
+                    <!--
+                        -->
+                  
+                </p>
+                <!-- -->
+                <hr class="page-divider transparent" />
+                <!-- -->
+                <!-- Schedule -->
+                <div class="schedule-wrapper schedule-alt clear">
+                    <div class="schedule-tabs lv1">
+                        <ul id="tabs-lv1" class="nav nav-justified">
+                            <!--
+                                -->
+                            <li class="active">
+                                <a href="#tab-first" data-toggle="tab">
+                                    <span class="line1">January</span>
+                                    <span class="line2">15</span>
+                                    <span class="line3">Event Day 01</span>
+                                </a>
+                            </li>
+                            <!--
+                                -->
+                            <li>
+                                <a href="#tab-second" data-toggle="tab">
+                                    <span class="line1">January</span>
+                                    <span class="line2">16</span>
+                                    <span class="line3">Event Day 02</span>
+                                </a>
+                            </li>
+                            <!--
+                                -->
+                            <li>
+                                <a href="#tab-third" data-toggle="tab">
+                                    <span class="line1">January</span>
+                                    <span class="line2">17</span>
+                                    <span class="line3">Event Day 03</span>
+                                </a>
+                            </li>
+                            <!--
+                                -->
+                            <li>
+                                <a href="#tab-last" data-toggle="tab">
+                                    <span class="line1">January</span>
+                                    <span class="line2">18</span>
+                                    <span class="line3">Event Day 04</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-content lv1">
+                        <!-- tab1 -->
+                        <div id="tab-first" class="tab-pane fade in active">
+                            <div class="schedule-tabs lv2">
+                                <ul id="tabs-lv21" class="nav nav-justified">
+                                    <li class="active"><a href="#tab-lv21-first" data-toggle="tab">HAll A</a></li>
+                                    <li><a href="#tab-lv21-second" data-toggle="tab">HAll B</a></li>
+                                    <li><a href="#tab-lv21-third" data-toggle="tab">HAll C</a></li>
+                                    <li><a href="#tab-lv21-last" data-toggle="tab">HAll D</a></li>
+                                </ul>
+                            </div>
+                            <div class="tab-content lv2">
+                                <div id="tab-lv21-first" class="tab-pane fade in active">
+                                    <div class="timeline">
+                                        <article class="post-wrap">
+                                            <div class="media">
+                                                <!-- -->
+                                                <div class="post-media pull-left">
+                                                    <img src="~/EM/assets/img/preview/avatar-v2-1.jpg" alt="" class="media-object" />
+                                                    <span class="about"><strong>John Doe</strong></span>
+                                                    <span class="about">CEO at Crown.io</span>
+                                                </div>
+                                                <!-- -->
+                                                <div class="media-body">
+                                                    <div class="post-header">
+                                                        <div class="post-meta">
+                                                            <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+                                                        </div>
+                                                        <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="post-excerpt">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-footer">
+                                                        <span class="post-readmore">
+                                                            <i class="fa fa-microphone"></i> <strong>Speakers:</strong> John Doe, Staven Mane; Andy Garcia &nbsp;
+                                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                            <a href="#"><i class="fa fa-instagram"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- -->
+                                            </div>
+                                        </article>
+                                        <article class="post-wrap">
+                                            <div class="media">
+                                                <!-- -->
+                                                <div class="post-media without-img pull-left"></div>
+                                                <!-- -->
+                                                <div class="media-body without-img">
+                                                    <div class="post-header">
+                                                        <div class="post-meta">
+                                                            <span class="post-date"><i class="fa fa-clock-o"></i> 12:00am - 13:45pm</span>
+                                                        </div>
+                                                        <h2 class="post-title"><a href="#">Resting and Lunch Break Time</a></h2>
+                                                    </div>
+                                                    <div class="post-footer"></div>
+                                                </div>
+                                                <!-- -->
+                                            </div>
+                                        </article>
+                                        <article class="post-wrap">
+                                            <div class="media">
+                                                <!-- -->
+                                                <div class="post-media pull-left">
+                                                    <img src="~/EM/assets/img/preview/avatar-v2-3.jpg" alt="" class="media-object" />
+                                                    <span class="about"><strong>John Doe</strong></span>
+                                                    <span class="about">CEO at Crown.io</span>
+                                                </div>
+                                                <!-- -->
+                                                <div class="media-body">
+                                                    <div class="post-header">
+                                                        <div class="post-meta">
+                                                            <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+                                                        </div>
+                                                        <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="post-excerpt">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-footer">
+                                                        <span class="post-readmore">
+                                                            <i class="fa fa-microphone"></i> <strong>Speakers:</strong> John Doe, Staven Mane; Andy Garcia &nbsp;
+                                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                            <a href="#"><i class="fa fa-instagram"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- -->
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div id="tab-lv21-second" class="tab-pane fade">
+                                    <div class="timeline">
+                                        <article class="post-wrap">
+                                            <div class="media">
+                                                <!-- -->
+                                                <div class="post-media pull-left">
+                                                    <img src="~/EM/assets/img/preview/avatar-v2-2.jpg" alt="" class="media-object" />
+                                                </div>
+                                                <!-- -->
+                                                <div class="media-body">
+                                                    <div class="post-header">
+                                                        <div class="post-meta">
+                                                            <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+                                                            <a href="#" class="pull-right">
+                                                                <span class="fa-stack fa-lg">
+                                                                    <i class="fa fa-stack-2x fa-circle-thin"></i>
+                                                                    <i class="fa fa-stack-1x fa-share-alt"></i>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="post-excerpt">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-footer">
+                                                        <span class="post-readmore">
+                                                            <i class="fa fa-microphone"></i> John Doe / CEO at Crown.io
+                                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                            <a href="#"><i class="fa fa-instagram"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- -->
+                                            </div>
+                                        </article>
+                                        <article class="post-wrap">
+                                            <div class="media">
+                                                <!-- -->
+                                                <div class="post-media pull-left">
+                                                    <img src="~/EM/assets/img/preview/avatar-v2-3.jpg" alt="" class="media-object" />
+                                                </div>
+                                                <!-- -->
+                                                <div class="media-body">
+                                                    <div class="post-header">
+                                                        <div class="post-meta">
+                                                            <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+                                                            <a href="#" class="pull-right">
+                                                                <span class="fa-stack fa-lg">
+                                                                    <i class="fa fa-stack-2x fa-circle-thin"></i>
+                                                                    <i class="fa fa-stack-1x fa-share-alt"></i>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="post-excerpt">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-footer">
+                                                        <span class="post-readmore">
+                                                            <i class="fa fa-microphone"></i> John Doe / CEO at Crown.io
+                                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                            <a href="#"><i class="fa fa-instagram"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- -->
+                                            </div>
+                                        </article>
+                                        <article class="post-wrap">
+                                            <div class="media">
+                                                <!-- -->
+                                                <div class="post-media pull-left">
+                                                    <img src="~/EM/assets/img/preview/avatar-v2-4.jpg" alt="" class="media-object" />
+                                                </div>
+                                                <!-- -->
+                                                <div class="media-body">
+                                                    <div class="post-header">
+                                                        <div class="post-meta">
+                                                            <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+                                                            <a href="#" class="pull-right">
+                                                                <span class="fa-stack fa-lg">
+                                                                    <i class="fa fa-stack-2x fa-circle-thin"></i>
+                                                                    <i class="fa fa-stack-1x fa-share-alt"></i>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="post-excerpt">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-footer">
+                                                        <span class="post-readmore">
+                                                            <i class="fa fa-microphone"></i> John Doe / CEO at Crown.io
+                                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                            <a href="#"><i class="fa fa-instagram"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- -->
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div id="tab-lv21-third" class="tab-pane fade">
+                                    <div class="timeline">
+                                        <article class="post-wrap">
+                                            <div class="media">
+                                                <!-- -->
+                                                <div class="post-media pull-left">
+                                                    <img src="~/EM/assets/img/preview/avatar-v2-3.jpg" alt="" class="media-object" />
+                                                </div>
+                                                <!-- -->
+                                                <div class="media-body">
+                                                    <div class="post-header">
+                                                        <div class="post-meta">
+                                                            <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+                                                            <a href="#" class="pull-right">
+                                                                <span class="fa-stack fa-lg">
+                                                                    <i class="fa fa-stack-2x fa-circle-thin"></i>
+                                                                    <i class="fa fa-stack-1x fa-share-alt"></i>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="post-excerpt">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-footer">
+                                                        <span class="post-readmore">
+                                                            <i class="fa fa-microphone"></i> John Doe / CEO at Crown.io
+                                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                            <a href="#"><i class="fa fa-instagram"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- -->
+                                            </div>
+                                        </article>
+                                        <article class="post-wrap">
+                                            <div class="media">
+                                                <!-- -->
+                                                <div class="post-media pull-left">
+                                                    <img src="~/EM/assets/img/preview/avatar-v2-4.jpg" alt="" class="media-object" />
+                                                </div>
+                                                <!-- -->
+                                                <div class="media-body">
+                                                    <div class="post-header">
+                                                        <div class="post-meta">
+                                                            <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+                                                            <a href="#" class="pull-right">
+                                                                <span class="fa-stack fa-lg">
+                                                                    <i class="fa fa-stack-2x fa-circle-thin"></i>
+                                                                    <i class="fa fa-stack-1x fa-share-alt"></i>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="post-excerpt">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-footer">
+                                                        <span class="post-readmore">
+                                                            <i class="fa fa-microphone"></i> John Doe / CEO at Crown.io
+                                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                            <a href="#"><i class="fa fa-instagram"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- -->
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div id="tab-lv21-last" class="tab-pane fade">
+                                    <div class="timeline">
+                                        <article class="post-wrap">
+                                            <div class="media">
+                                                <!-- -->
+                                                <div class="post-media pull-left">
+                                                    <img src="~/EM/assets/img/preview/avatar-v2-2.jpg" alt="" class="media-object" />
+                                                </div>
+                                                <!-- -->
+                                                <div class="media-body">
+                                                    <div class="post-header">
+                                                        <div class="post-meta">
+                                                            <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+                                                            <a href="#" class="pull-right">
+                                                                <span class="fa-stack fa-lg">
+                                                                    <i class="fa fa-stack-2x fa-circle-thin"></i>
+                                                                    <i class="fa fa-stack-1x fa-share-alt"></i>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="post-excerpt">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-footer">
+                                                        <span class="post-readmore">
+                                                            <i class="fa fa-microphone"></i> John Doe / CEO at Crown.io
+                                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                            <a href="#"><i class="fa fa-instagram"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- -->
+                                            </div>
+                                        </article>
+                                        <article class="post-wrap">
+                                            <div class="media">
+                                                <!-- -->
+                                                <div class="post-media pull-left">
+                                                    <img src="~/EM/assets/img/preview/avatar-v2-3.jpg" alt="" class="media-object" />
+                                                </div>
+                                                <!-- -->
+                                                <div class="media-body">
+                                                    <div class="post-header">
+                                                        <div class="post-meta">
+                                                            <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+                                                            <a href="#" class="pull-right">
+                                                                <span class="fa-stack fa-lg">
+                                                                    <i class="fa fa-stack-2x fa-circle-thin"></i>
+                                                                    <i class="fa fa-stack-1x fa-share-alt"></i>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="post-excerpt">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-footer">
+                                                        <span class="post-readmore">
+                                                            <i class="fa fa-microphone"></i> John Doe / CEO at Crown.io
+                                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                            <a href="#"><i class="fa fa-instagram"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- -->
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- tab2 -->
+                        <div id="tab-second" class="tab-pane fade">
+                            <div class="schedule-tabs lv2">
+                                <ul id="tabs-lv22" class="nav nav-justified">
+                                    <li class="active"><a href="#tab-lv22-first" data-toggle="tab">HAll A</a></li>
+                                    <li><a href="#tab-lv22-second" data-toggle="tab">HAll B</a></li>
+                                    <li><a href="#tab-lv22-third" data-toggle="tab">HAll C</a></li>
+                                    <li><a href="#tab-lv22-last" data-toggle="tab">HAll D</a></li>
+                                </ul>
+                            </div>
+                            <div class="tab-content lv2">
+                                <div id="tab-lv22-first" class="tab-pane fade in active">
+                                    <div class="timeline">
+                                        <article class="post-wrap">
+                                            <div class="media">
+                                                <!-- -->
+                                                <div class="post-media pull-left">
+                                                    <img src="~/EM/assets/img/preview/avatar-v2-2.jpg" alt="" class="media-object" />
+                                                </div>
+                                                <!-- -->
+                                                <div class="media-body">
+                                                    <div class="post-header">
+                                                        <div class="post-meta">
+                                                            <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+                                                            <a href="#" class="pull-right">
+                                                                <span class="fa-stack fa-lg">
+                                                                    <i class="fa fa-stack-2x fa-circle-thin"></i>
+                                                                    <i class="fa fa-stack-1x fa-share-alt"></i>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="post-excerpt">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-footer">
+                                                        <span class="post-readmore">
+                                                            <i class="fa fa-microphone"></i> John Doe / CEO at Crown.io
+                                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                            <a href="#"><i class="fa fa-instagram"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- -->
+                                            </div>
+                                        </article>
+                                        <article class="post-wrap">
+                                            <div class="media">
+                                                <!-- -->
+                                                <div class="post-media pull-left">
+                                                    <img src="~/EM/assets/img/preview/avatar-v2-1.jpg" alt="" class="media-object" />
+                                                </div>
+                                                <!-- -->
+                                                <div class="media-body">
+                                                    <div class="post-header">
+                                                        <div class="post-meta">
+                                                            <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+                                                            <a href="#" class="pull-right">
+                                                                <span class="fa-stack fa-lg">
+                                                                    <i class="fa fa-stack-2x fa-circle-thin"></i>
+                                                                    <i class="fa fa-stack-1x fa-share-alt"></i>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="post-excerpt">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-footer">
+                                                        <span class="post-readmore">
+                                                            <i class="fa fa-microphone"></i> <strong>John Doe</strong> / CEO at Crown.io
+                                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                            <a href="#"><i class="fa fa-instagram"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- -->
+                                            </div>
+                                        </article>
+                                        <article class="post-wrap">
+                                            <div class="media">
+                                                <!-- -->
+                                                <div class="post-media pull-left">
+                                                    <img src="~/EM/assets/img/preview/avatar-v2-3.jpg" alt="" class="media-object" />
+                                                </div>
+                                                <!-- -->
+                                                <div class="media-body">
+                                                    <div class="post-header">
+                                                        <div class="post-meta">
+                                                            <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+                                                            <a href="#" class="pull-right">
+                                                                <span class="fa-stack fa-lg">
+                                                                    <i class="fa fa-stack-2x fa-circle-thin"></i>
+                                                                    <i class="fa fa-stack-1x fa-share-alt"></i>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="post-excerpt">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-footer">
+                                                        <span class="post-readmore">
+                                                            <i class="fa fa-microphone"></i> John Doe / CEO at Crown.io
+                                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                            <a href="#"><i class="fa fa-instagram"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- -->
+                                            </div>
+                                        </article>
+                                        <article class="post-wrap">
+                                            <div class="media">
+                                                <!-- -->
+                                                <div class="post-media pull-left">
+                                                    <img src="~/EM/assets/img/preview/avatar-v2-4.jpg" alt="" class="media-object" />
+                                                </div>
+                                                <!-- -->
+                                                <div class="media-body">
+                                                    <div class="post-header">
+                                                        <div class="post-meta">
+                                                            <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+                                                            <a href="#" class="pull-right">
+                                                                <span class="fa-stack fa-lg">
+                                                                    <i class="fa fa-stack-2x fa-circle-thin"></i>
+                                                                    <i class="fa fa-stack-1x fa-share-alt"></i>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="post-excerpt">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-footer">
+                                                        <span class="post-readmore">
+                                                            <i class="fa fa-microphone"></i> John Doe / CEO at Crown.io
+                                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                            <a href="#"><i class="fa fa-instagram"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- -->
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div id="tab-lv22-second" class="tab-pane fade">
+                                    <div class="timeline">
+                                        <article class="post-wrap">
+                                            <div class="media">
+                                                <!-- -->
+                                                <div class="post-media pull-left">
+                                                    <img src="~/EM/assets/img/preview/avatar-v2-2.jpg" alt="" class="media-object" />
+                                                </div>
+                                                <!-- -->
+                                                <div class="media-body">
+                                                    <div class="post-header">
+                                                        <div class="post-meta">
+                                                            <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+                                                            <a href="#" class="pull-right">
+                                                                <span class="fa-stack fa-lg">
+                                                                    <i class="fa fa-stack-2x fa-circle-thin"></i>
+                                                                    <i class="fa fa-stack-1x fa-share-alt"></i>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="post-excerpt">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-footer">
+                                                        <span class="post-readmore">
+                                                            <i class="fa fa-microphone"></i> John Doe / CEO at Crown.io
+                                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                            <a href="#"><i class="fa fa-instagram"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- -->
+                                            </div>
+                                        </article>
+                                        <article class="post-wrap">
+                                            <div class="media">
+                                                <!-- -->
+                                                <div class="post-media pull-left">
+                                                    <img src="~/EM/assets/img/preview/avatar-v2-3.jpg" alt="" class="media-object" />
+                                                </div>
+                                                <!-- -->
+                                                <div class="media-body">
+                                                    <div class="post-header">
+                                                        <div class="post-meta">
+                                                            <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+                                                            <a href="#" class="pull-right">
+                                                                <span class="fa-stack fa-lg">
+                                                                    <i class="fa fa-stack-2x fa-circle-thin"></i>
+                                                                    <i class="fa fa-stack-1x fa-share-alt"></i>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="post-excerpt">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-footer">
+                                                        <span class="post-readmore">
+                                                            <i class="fa fa-microphone"></i> John Doe / CEO at Crown.io
+                                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                            <a href="#"><i class="fa fa-instagram"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- -->
+                                            </div>
+                                        </article>
+                                        <article class="post-wrap">
+                                            <div class="media">
+                                                <!-- -->
+                                                <div class="post-media pull-left">
+                                                    <img src="~/EM/assets/img/preview/avatar-v2-4.jpg" alt="" class="media-object" />
+                                                </div>
+                                                <!-- -->
+                                                <div class="media-body">
+                                                    <div class="post-header">
+                                                        <div class="post-meta">
+                                                            <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+                                                            <a href="#" class="pull-right">
+                                                                <span class="fa-stack fa-lg">
+                                                                    <i class="fa fa-stack-2x fa-circle-thin"></i>
+                                                                    <i class="fa fa-stack-1x fa-share-alt"></i>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="post-excerpt">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-footer">
+                                                        <span class="post-readmore">
+                                                            <i class="fa fa-microphone"></i> John Doe / CEO at Crown.io
+                                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                            <a href="#"><i class="fa fa-instagram"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- -->
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div id="tab-lv22-third" class="tab-pane fade">
+                                    <div class="timeline">
+                                        <article class="post-wrap">
+                                            <div class="media">
+                                                <!-- -->
+                                                <div class="post-media pull-left">
+                                                    <img src="~/EM/assets/img/preview/avatar-v2-3.jpg" alt="" class="media-object" />
+                                                </div>
+                                                <!-- -->
+                                                <div class="media-body">
+                                                    <div class="post-header">
+                                                        <div class="post-meta">
+                                                            <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+                                                            <a href="#" class="pull-right">
+                                                                <span class="fa-stack fa-lg">
+                                                                    <i class="fa fa-stack-2x fa-circle-thin"></i>
+                                                                    <i class="fa fa-stack-1x fa-share-alt"></i>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="post-excerpt">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-footer">
+                                                        <span class="post-readmore">
+                                                            <i class="fa fa-microphone"></i> John Doe / CEO at Crown.io
+                                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                            <a href="#"><i class="fa fa-instagram"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- -->
+                                            </div>
+                                        </article>
+                                        <article class="post-wrap">
+                                            <div class="media">
+                                                <!-- -->
+                                                <div class="post-media pull-left">
+                                                    <img src="~/EM/assets/img/preview/avatar-v2-4.jpg" alt="" class="media-object" />
+                                                </div>
+                                                <!-- -->
+                                                <div class="media-body">
+                                                    <div class="post-header">
+                                                        <div class="post-meta">
+                                                            <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+                                                            <a href="#" class="pull-right">
+                                                                <span class="fa-stack fa-lg">
+                                                                    <i class="fa fa-stack-2x fa-circle-thin"></i>
+                                                                    <i class="fa fa-stack-1x fa-share-alt"></i>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="post-excerpt">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-footer">
+                                                        <span class="post-readmore">
+                                                            <i class="fa fa-microphone"></i> John Doe / CEO at Crown.io
+                                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                            <a href="#"><i class="fa fa-instagram"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- -->
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div id="tab-lv22-last" class="tab-pane fade">
+                                    <div class="timeline">
+                                        <article class="post-wrap">
+                                            <div class="media">
+                                                <!-- -->
+                                                <div class="post-media pull-left">
+                                                    <img src="~/EM/assets/img/preview/avatar-v2-2.jpg" alt="" class="media-object" />
+                                                </div>
+                                                <!-- -->
+                                                <div class="media-body">
+                                                    <div class="post-header">
+                                                        <div class="post-meta">
+                                                            <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+                                                            <a href="#" class="pull-right">
+                                                                <span class="fa-stack fa-lg">
+                                                                    <i class="fa fa-stack-2x fa-circle-thin"></i>
+                                                                    <i class="fa fa-stack-1x fa-share-alt"></i>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="post-excerpt">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-footer">
+                                                        <span class="post-readmore">
+                                                            <i class="fa fa-microphone"></i> John Doe / CEO at Crown.io
+                                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                            <a href="#"><i class="fa fa-instagram"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- -->
+                                            </div>
+                                        </article>
+                                        <article class="post-wrap">
+                                            <div class="media">
+                                                <!-- -->
+                                                <div class="post-media pull-left">
+                                                    <img src="~/EM/assets/img/preview/avatar-v2-3.jpg" alt="" class="media-object" />
+                                                </div>
+                                                <!-- -->
+                                                <div class="media-body">
+                                                    <div class="post-header">
+                                                        <div class="post-meta">
+                                                            <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+                                                            <a href="#" class="pull-right">
+                                                                <span class="fa-stack fa-lg">
+                                                                    <i class="fa fa-stack-2x fa-circle-thin"></i>
+                                                                    <i class="fa fa-stack-1x fa-share-alt"></i>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="post-excerpt">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-footer">
+                                                        <span class="post-readmore">
+                                                            <i class="fa fa-microphone"></i> John Doe / CEO at Crown.io
+                                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                            <a href="#"><i class="fa fa-instagram"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- -->
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- tab3 -->
+                        <div id="tab-third" class="tab-pane fade">
+                            <div class="schedule-tabs lv2">
+                                <ul id="tabs-lv23" class="nav nav-justified">
+                                    <li class="active"><a href="#tab-lv23-first" data-toggle="tab">HAll A</a></li>
+                                    <li><a href="#tab-lv23-second" data-toggle="tab">HAll B</a></li>
+                                    <li><a href="#tab-lv23-third" data-toggle="tab">HAll C</a></li>
+                                    <li><a href="#tab-lv23-last" data-toggle="tab">HAll D</a></li>
+                                </ul>
+                            </div>
+                            <div class="tab-content lv2">
+                                <div id="tab-lv23-first" class="tab-pane fade in active">
+                                    <div class="timeline">
+                                        <article class="post-wrap">
+                                            <div class="media">
+                                                <!-- -->
+                                                <div class="post-media pull-left">
+                                                    <img src="~/EM/assets/img/preview/avatar-v2-2.jpg" alt="" class="media-object" />
+                                                </div>
+                                                <!-- -->
+                                                <div class="media-body">
+                                                    <div class="post-header">
+                                                        <div class="post-meta">
+                                                            <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+                                                            <a href="#" class="pull-right">
+                                                                <span class="fa-stack fa-lg">
+                                                                    <i class="fa fa-stack-2x fa-circle-thin"></i>
+                                                                    <i class="fa fa-stack-1x fa-share-alt"></i>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="post-excerpt">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-footer">
+                                                        <span class="post-readmore">
+                                                            <i class="fa fa-microphone"></i> John Doe / CEO at Crown.io
+                                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                            <a href="#"><i class="fa fa-instagram"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- -->
+                                            </div>
+                                        </article>
+                                        <article class="post-wrap">
+                                            <div class="media">
+                                                <!-- -->
+                                                <div class="post-media pull-left">
+                                                    <img src="~/EM/assets/img/preview/avatar-v2-3.jpg" alt="" class="media-object" />
+                                                </div>
+                                                <!-- -->
+                                                <div class="media-body">
+                                                    <div class="post-header">
+                                                        <div class="post-meta">
+                                                            <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+                                                            <a href="#" class="pull-right">
+                                                                <span class="fa-stack fa-lg">
+                                                                    <i class="fa fa-stack-2x fa-circle-thin"></i>
+                                                                    <i class="fa fa-stack-1x fa-share-alt"></i>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="post-excerpt">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-footer">
+                                                        <span class="post-readmore">
+                                                            <i class="fa fa-microphone"></i> John Doe / CEO at Crown.io
+                                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                            <a href="#"><i class="fa fa-instagram"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- -->
+                                            </div>
+                                        </article>
+                                        <article class="post-wrap">
+                                            <div class="media">
+                                                <!-- -->
+                                                <div class="post-media pull-left">
+                                                    <img src="~/EM/assets/img/preview/avatar-v2-4.jpg" alt="" class="media-object" />
+                                                </div>
+                                                <!-- -->
+                                                <div class="media-body">
+                                                    <div class="post-header">
+                                                        <div class="post-meta">
+                                                            <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+                                                            <a href="#" class="pull-right">
+                                                                <span class="fa-stack fa-lg">
+                                                                    <i class="fa fa-stack-2x fa-circle-thin"></i>
+                                                                    <i class="fa fa-stack-1x fa-share-alt"></i>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="post-excerpt">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-footer">
+                                                        <span class="post-readmore">
+                                                            <i class="fa fa-microphone"></i> John Doe / CEO at Crown.io
+                                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                            <a href="#"><i class="fa fa-instagram"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- -->
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div id="tab-lv23-second" class="tab-pane fade">
+                                    <div class="timeline">
+                                        <article class="post-wrap">
+                                            <div class="media">
+                                                <!-- -->
+                                                <div class="post-media pull-left">
+                                                    <img src="~/EM/assets/img/preview/avatar-v2-3.jpg" alt="" class="media-object" />
+                                                </div>
+                                                <!-- -->
+                                                <div class="media-body">
+                                                    <div class="post-header">
+                                                        <div class="post-meta">
+                                                            <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+                                                            <a href="#" class="pull-right">
+                                                                <span class="fa-stack fa-lg">
+                                                                    <i class="fa fa-stack-2x fa-circle-thin"></i>
+                                                                    <i class="fa fa-stack-1x fa-share-alt"></i>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="post-excerpt">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-footer">
+                                                        <span class="post-readmore">
+                                                            <i class="fa fa-microphone"></i> John Doe / CEO at Crown.io
+                                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                            <a href="#"><i class="fa fa-instagram"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- -->
+                                            </div>
+                                        </article>
+                                        <article class="post-wrap">
+                                            <div class="media">
+                                                <!-- -->
+                                                <div class="post-media pull-left">
+                                                    <img src="~/EM/assets/img/preview/avatar-v2-4.jpg" alt="" class="media-object" />
+                                                </div>
+                                                <!-- -->
+                                                <div class="media-body">
+                                                    <div class="post-header">
+                                                        <div class="post-meta">
+                                                            <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+                                                            <a href="#" class="pull-right">
+                                                                <span class="fa-stack fa-lg">
+                                                                    <i class="fa fa-stack-2x fa-circle-thin"></i>
+                                                                    <i class="fa fa-stack-1x fa-share-alt"></i>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="post-excerpt">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-footer">
+                                                        <span class="post-readmore">
+                                                            <i class="fa fa-microphone"></i> John Doe / CEO at Crown.io
+                                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                            <a href="#"><i class="fa fa-instagram"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- -->
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div id="tab-lv23-third" class="tab-pane fade">
+                                    <div class="timeline">
+                                        <article class="post-wrap">
+                                            <div class="media">
+                                                <!-- -->
+                                                <div class="post-media pull-left">
+                                                    <img src="~/EM/assets/img/preview/avatar-v2-2.jpg" alt="" class="media-object" />
+                                                </div>
+                                                <!-- -->
+                                                <div class="media-body">
+                                                    <div class="post-header">
+                                                        <div class="post-meta">
+                                                            <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+                                                            <a href="#" class="pull-right">
+                                                                <span class="fa-stack fa-lg">
+                                                                    <i class="fa fa-stack-2x fa-circle-thin"></i>
+                                                                    <i class="fa fa-stack-1x fa-share-alt"></i>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="post-excerpt">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-footer">
+                                                        <span class="post-readmore">
+                                                            <i class="fa fa-microphone"></i> John Doe / CEO at Crown.io
+                                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                            <a href="#"><i class="fa fa-instagram"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- -->
+                                            </div>
+                                        </article>
+                                        <article class="post-wrap">
+                                            <div class="media">
+                                                <!-- -->
+                                                <div class="post-media pull-left">
+                                                    <img src="~/EM/assets/img/preview/avatar-v2-3.jpg" alt="" class="media-object" />
+                                                </div>
+                                                <!-- -->
+                                                <div class="media-body">
+                                                    <div class="post-header">
+                                                        <div class="post-meta">
+                                                            <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+                                                            <a href="#" class="pull-right">
+                                                                <span class="fa-stack fa-lg">
+                                                                    <i class="fa fa-stack-2x fa-circle-thin"></i>
+                                                                    <i class="fa fa-stack-1x fa-share-alt"></i>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="post-excerpt">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-footer">
+                                                        <span class="post-readmore">
+                                                            <i class="fa fa-microphone"></i> John Doe / CEO at Crown.io
+                                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                            <a href="#"><i class="fa fa-instagram"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- -->
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div id="tab-lv23-last" class="tab-pane fade">
+                                    <div class="timeline">
+                                        <article class="post-wrap">
+                                            <div class="media">
+                                                <!-- -->
+                                                <div class="post-media pull-left">
+                                                    <img src="~/EM/assets/img/preview/avatar-v2-1.jpg" alt="" class="media-object" />
+                                                </div>
+                                                <!-- -->
+                                                <div class="media-body">
+                                                    <div class="post-header">
+                                                        <div class="post-meta">
+                                                            <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+                                                            <a href="#" class="pull-right">
+                                                                <span class="fa-stack fa-lg">
+                                                                    <i class="fa fa-stack-2x fa-circle-thin"></i>
+                                                                    <i class="fa fa-stack-1x fa-share-alt"></i>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="post-excerpt">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-footer">
+                                                        <span class="post-readmore">
+                                                            <i class="fa fa-microphone"></i> <strong>John Doe</strong> / CEO at Crown.io
+                                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                            <a href="#"><i class="fa fa-instagram"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- -->
+                                            </div>
+                                        </article>
+                                        <article class="post-wrap">
+                                            <div class="media">
+                                                <!-- -->
+                                                <div class="post-media pull-left">
+                                                    <img src="~/EM/assets/img/preview/avatar-v2-2.jpg" alt="" class="media-object" />
+                                                </div>
+                                                <!-- -->
+                                                <div class="media-body">
+                                                    <div class="post-header">
+                                                        <div class="post-meta">
+                                                            <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+                                                            <a href="#" class="pull-right">
+                                                                <span class="fa-stack fa-lg">
+                                                                    <i class="fa fa-stack-2x fa-circle-thin"></i>
+                                                                    <i class="fa fa-stack-1x fa-share-alt"></i>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="post-excerpt">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-footer">
+                                                        <span class="post-readmore">
+                                                            <i class="fa fa-microphone"></i> John Doe / CEO at Crown.io
+                                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                            <a href="#"><i class="fa fa-instagram"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- -->
+                                            </div>
+                                        </article>
+                                        <article class="post-wrap">
+                                            <div class="media">
+                                                <!-- -->
+                                                <div class="post-media pull-left">
+                                                    <img src="~/EM/assets/img/preview/avatar-v2-3.jpg" alt="" class="media-object" />
+                                                </div>
+                                                <!-- -->
+                                                <div class="media-body">
+                                                    <div class="post-header">
+                                                        <div class="post-meta">
+                                                            <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+                                                            <a href="#" class="pull-right">
+                                                                <span class="fa-stack fa-lg">
+                                                                    <i class="fa fa-stack-2x fa-circle-thin"></i>
+                                                                    <i class="fa fa-stack-1x fa-share-alt"></i>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="post-excerpt">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-footer">
+                                                        <span class="post-readmore">
+                                                            <i class="fa fa-microphone"></i> John Doe / CEO at Crown.io
+                                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                            <a href="#"><i class="fa fa-instagram"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- -->
+                                            </div>
+                                        </article>
+                                        <article class="post-wrap">
+                                            <div class="media">
+                                                <!-- -->
+                                                <div class="post-media pull-left">
+                                                    <img src="~/EM/assets/img/preview/avatar-v2-4.jpg" alt="" class="media-object" />
+                                                </div>
+                                                <!-- -->
+                                                <div class="media-body">
+                                                    <div class="post-header">
+                                                        <div class="post-meta">
+                                                            <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+                                                            <a href="#" class="pull-right">
+                                                                <span class="fa-stack fa-lg">
+                                                                    <i class="fa fa-stack-2x fa-circle-thin"></i>
+                                                                    <i class="fa fa-stack-1x fa-share-alt"></i>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="post-excerpt">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-footer">
+                                                        <span class="post-readmore">
+                                                            <i class="fa fa-microphone"></i> John Doe / CEO at Crown.io
+                                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                            <a href="#"><i class="fa fa-instagram"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- -->
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- tab4 -->
+                        <div id="tab-last" class="tab-pane fade">
+                            <div class="schedule-tabs lv2">
+                                <ul id="tabs-lv24" class="nav nav-justified">
+                                    <li class="active"><a href="#tab-lv24-first" data-toggle="tab">HAll A</a></li>
+                                    <li><a href="#tab-lv24-second" data-toggle="tab">HAll B</a></li>
+                                    <li><a href="#tab-lv24-third" data-toggle="tab">HAll C</a></li>
+                                    <li><a href="#tab-lv24-last" data-toggle="tab">HAll D</a></li>
+                                </ul>
+                            </div>
+                            <div class="tab-content lv2">
+                                <div id="tab-lv24-first" class="tab-pane fade in active">
+                                    <div class="timeline">
+                                        <article class="post-wrap">
+                                            <div class="media">
+                                                <!-- -->
+                                                <div class="post-media pull-left">
+                                                    <img src="~/EM/assets/img/preview/avatar-v2-2.jpg" alt="" class="media-object" />
+                                                </div>
+                                                <!-- -->
+                                                <div class="media-body">
+                                                    <div class="post-header">
+                                                        <div class="post-meta">
+                                                            <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+                                                            <a href="#" class="pull-right">
+                                                                <span class="fa-stack fa-lg">
+                                                                    <i class="fa fa-stack-2x fa-circle-thin"></i>
+                                                                    <i class="fa fa-stack-1x fa-share-alt"></i>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="post-excerpt">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-footer">
+                                                        <span class="post-readmore">
+                                                            <i class="fa fa-microphone"></i> John Doe / CEO at Crown.io
+                                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                            <a href="#"><i class="fa fa-instagram"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- -->
+                                            </div>
+                                        </article>
+                                        <article class="post-wrap">
+                                            <div class="media">
+                                                <!-- -->
+                                                <div class="post-media pull-left">
+                                                    <img src="~/EM/assets/img/preview/avatar-v2-3.jpg" alt="" class="media-object" />
+                                                </div>
+                                                <!-- -->
+                                                <div class="media-body">
+                                                    <div class="post-header">
+                                                        <div class="post-meta">
+                                                            <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+                                                            <a href="#" class="pull-right">
+                                                                <span class="fa-stack fa-lg">
+                                                                    <i class="fa fa-stack-2x fa-circle-thin"></i>
+                                                                    <i class="fa fa-stack-1x fa-share-alt"></i>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="post-excerpt">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-footer">
+                                                        <span class="post-readmore">
+                                                            <i class="fa fa-microphone"></i> John Doe / CEO at Crown.io
+                                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                            <a href="#"><i class="fa fa-instagram"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- -->
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div id="tab-lv24-second" class="tab-pane fade">
+                                    <div class="timeline">
+                                        <article class="post-wrap">
+                                            <div class="media">
+                                                <!-- -->
+                                                <div class="post-media pull-left">
+                                                    <img src="~/EM/assets/img/preview/avatar-v2-3.jpg" alt="" class="media-object" />
+                                                </div>
+                                                <!-- -->
+                                                <div class="media-body">
+                                                    <div class="post-header">
+                                                        <div class="post-meta">
+                                                            <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+                                                            <a href="#" class="pull-right">
+                                                                <span class="fa-stack fa-lg">
+                                                                    <i class="fa fa-stack-2x fa-circle-thin"></i>
+                                                                    <i class="fa fa-stack-1x fa-share-alt"></i>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="post-excerpt">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-footer">
+                                                        <span class="post-readmore">
+                                                            <i class="fa fa-microphone"></i> John Doe / CEO at Crown.io
+                                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                            <a href="#"><i class="fa fa-instagram"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- -->
+                                            </div>
+                                        </article>
+                                        <article class="post-wrap">
+                                            <div class="media">
+                                                <!-- -->
+                                                <div class="post-media pull-left">
+                                                    <img src="~/EM/assets/img/preview/avatar-v2-4.jpg" alt="" class="media-object" />
+                                                </div>
+                                                <!-- -->
+                                                <div class="media-body">
+                                                    <div class="post-header">
+                                                        <div class="post-meta">
+                                                            <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+                                                            <a href="#" class="pull-right">
+                                                                <span class="fa-stack fa-lg">
+                                                                    <i class="fa fa-stack-2x fa-circle-thin"></i>
+                                                                    <i class="fa fa-stack-1x fa-share-alt"></i>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="post-excerpt">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-footer">
+                                                        <span class="post-readmore">
+                                                            <i class="fa fa-microphone"></i> John Doe / CEO at Crown.io
+                                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                            <a href="#"><i class="fa fa-instagram"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- -->
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div id="tab-lv24-third" class="tab-pane fade">
+                                    <div class="timeline">
+                                        <article class="post-wrap">
+                                            <div class="media">
+                                                <!-- -->
+                                                <div class="post-media pull-left">
+                                                    <img src="~/EM/assets/img/preview/avatar-v2-2.jpg" alt="" class="media-object" />
+                                                </div>
+                                                <!-- -->
+                                                <div class="media-body">
+                                                    <div class="post-header">
+                                                        <div class="post-meta">
+                                                            <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+                                                            <a href="#" class="pull-right">
+                                                                <span class="fa-stack fa-lg">
+                                                                    <i class="fa fa-stack-2x fa-circle-thin"></i>
+                                                                    <i class="fa fa-stack-1x fa-share-alt"></i>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="post-excerpt">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-footer">
+                                                        <span class="post-readmore">
+                                                            <i class="fa fa-microphone"></i> John Doe / CEO at Crown.io
+                                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                            <a href="#"><i class="fa fa-instagram"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- -->
+                                            </div>
+                                        </article>
+                                        <article class="post-wrap">
+                                            <div class="media">
+                                                <!-- -->
+                                                <div class="post-media pull-left">
+                                                    <img src="~/EM/assets/img/preview/avatar-v2-3.jpg" alt="" class="media-object" />
+                                                </div>
+                                                <!-- -->
+                                                <div class="media-body">
+                                                    <div class="post-header">
+                                                        <div class="post-meta">
+                                                            <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+                                                            <a href="#" class="pull-right">
+                                                                <span class="fa-stack fa-lg">
+                                                                    <i class="fa fa-stack-2x fa-circle-thin"></i>
+                                                                    <i class="fa fa-stack-1x fa-share-alt"></i>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="post-excerpt">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-footer">
+                                                        <span class="post-readmore">
+                                                            <i class="fa fa-microphone"></i> John Doe / CEO at Crown.io
+                                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                            <a href="#"><i class="fa fa-instagram"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- -->
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div id="tab-lv24-last" class="tab-pane fade">
+                                    <div class="timeline">
+                                        <article class="post-wrap">
+                                            <div class="media">
+                                                <!-- -->
+                                                <div class="post-media pull-left">
+                                                    <img src="~/EM/assets/img/preview/avatar-v2-1.jpg" alt="" class="media-object" />
+                                                </div>
+                                                <!-- -->
+                                                <div class="media-body">
+                                                    <div class="post-header">
+                                                        <div class="post-meta">
+                                                            <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+                                                            <a href="#" class="pull-right">
+                                                                <span class="fa-stack fa-lg">
+                                                                    <i class="fa fa-stack-2x fa-circle-thin"></i>
+                                                                    <i class="fa fa-stack-1x fa-share-alt"></i>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="post-excerpt">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-footer">
+                                                        <span class="post-readmore">
+                                                            <i class="fa fa-microphone"></i> <strong>John Doe</strong> / CEO at Crown.io
+                                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                            <a href="#"><i class="fa fa-instagram"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- -->
+                                            </div>
+                                        </article>
+                                        <article class="post-wrap">
+                                            <div class="media">
+                                                <!-- -->
+                                                <div class="post-media pull-left">
+                                                    <img src="~/EM/assets/img/preview/avatar-v2-2.jpg" alt="" class="media-object" />
+                                                </div>
+                                                <!-- -->
+                                                <div class="media-body">
+                                                    <div class="post-header">
+                                                        <div class="post-meta">
+                                                            <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+                                                            <a href="#" class="pull-right">
+                                                                <span class="fa-stack fa-lg">
+                                                                    <i class="fa fa-stack-2x fa-circle-thin"></i>
+                                                                    <i class="fa fa-stack-1x fa-share-alt"></i>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="post-excerpt">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-footer">
+                                                        <span class="post-readmore">
+                                                            <i class="fa fa-microphone"></i> John Doe / CEO at Crown.io
+                                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                            <a href="#"><i class="fa fa-instagram"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- -->
+                                            </div>
+                                        </article>
+                                        <article class="post-wrap">
+                                            <div class="media">
+                                                <!-- -->
+                                                <div class="post-media pull-left">
+                                                    <img src="~/EM/assets/img/preview/avatar-v2-3.jpg" alt="" class="media-object" />
+                                                </div>
+                                                <!-- -->
+                                                <div class="media-body">
+                                                    <div class="post-header">
+                                                        <div class="post-meta">
+                                                            <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+                                                            <a href="#" class="pull-right">
+                                                                <span class="fa-stack fa-lg">
+                                                                    <i class="fa fa-stack-2x fa-circle-thin"></i>
+                                                                    <i class="fa fa-stack-1x fa-share-alt"></i>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="post-excerpt">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-footer">
+                                                        <span class="post-readmore">
+                                                            <i class="fa fa-microphone"></i> John Doe / CEO at Crown.io
+                                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                            <a href="#"><i class="fa fa-instagram"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- -->
+                                            </div>
+                                        </article>
+                                        <article class="post-wrap">
+                                            <div class="media">
+                                                <!-- -->
+                                                <div class="post-media pull-left">
+                                                    <img src="~/EM/assets/img/preview/avatar-v2-4.jpg" alt="" class="media-object" />
+                                                </div>
+                                                <!-- -->
+                                                <div class="media-body">
+                                                    <div class="post-header">
+                                                        <div class="post-meta">
+                                                            <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
+                                                            <a href="#" class="pull-right">
+                                                                <span class="fa-stack fa-lg">
+                                                                    <i class="fa fa-stack-2x fa-circle-thin"></i>
+                                                                    <i class="fa fa-stack-1x fa-share-alt"></i>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
+                                                    </div>
+                                                    <div class="post-body">
+                                                        <div class="post-excerpt">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-footer">
+                                                        <span class="post-readmore">
+                                                            <i class="fa fa-microphone"></i> John Doe / CEO at Crown.io
+                                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                            <a href="#"><i class="fa fa-instagram"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- -->
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Schedule -->
+                <!-- -->
+                <hr class="page-divider transparent half2" />
+             
+             
+                <!-- -->
+                <h1 class="section-title">
+                    <span class="icon-inner"><span class="fa-stack"><i class="fa rhex fa-stack-2x"></i><i class="fa fa-user fa-stack-1x"></i></span></span>
+                    <span class="title-inner">Event Speakers <small> </small></span>
+                </h1>
+                <!-- Speakers row -->
+                <div class="thumbnails clear">
+                    <div class="carousel-slider">
+                        <div class="owl-carousel slide-3 owl-theme owl-loaded">
+
+                            <!-- -->
+                            <!-- -->
+
+                            <div style="padding-left: 0px; padding-right: 0px;" class="owl-stage-outer">
+                                <div style="width: 2565px; transform: translate3d(-1140px, 0px, 0px); transition: all 0.25s ease 0s;" class="owl-stage">
+                                    <div style="width: 255px; margin-right: 30px;" class="owl-item cloned">
+                                        <div>
+                                            <div class="thumbnail no-border no-padding text-center">
+                                                <div class="rehex speaker-avatar">
+                                                    <div class="rehex-deg">
+                                                        <div class="rehex-deg">
+                                                            <div class="rehex-inner">
+                                                                <div class="media">
+                                                                    <img src="~/EM/assets/img/preview/speaker-1.jpg" alt="">
+                                                                    <div class="caption hovered">
+                                                                        <div class="caption-wrapper div-table">
+                                                                            <div class="caption-inner div-cell">
+                                                                                <p class="caption-buttons"><a href="#" class="btn caption-link"><i class="fa fa-link"></i></a></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="caption before-media">
+                                                    <h3 class="caption-title">Speaker name here</h3>
+                                                    <p class="caption-category">Co Founder</p>
+                                                </div>
+                                                <div class="caption">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed vel velit</p>
+                                                    <ul class="social-line list-inline text-center">
+                                                        <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                                                        <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                                                        <li><a href="#" class="google"><i class="fa fa-google-plus"></i></a></li>
+                                                        <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                                                        <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><div style="width: 255px; margin-right: 30px;" class="owl-item cloned">
+                                        <div>
+                                            <div class="thumbnail no-border no-padding text-center">
+                                                <div class="rehex speaker-avatar">
+                                                    <div class="rehex-deg">
+                                                        <div class="rehex-deg">
+                                                            <div class="rehex-inner">
+                                                                <div class="media">
+                                                                    <img src="~/EM/assets/img/preview/speaker-2.jpg" alt="">
+                                                                    <div class="caption hovered">
+                                                                        <div class="caption-wrapper div-table">
+                                                                            <div class="caption-inner div-cell">
+                                                                                <p class="caption-buttons"><a href="#" class="btn caption-link"><i class="fa fa-link"></i></a></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="caption before-media">
+                                                    <h3 class="caption-title">Speaker name here</h3>
+                                                    <p class="caption-category">Co Founder</p>
+                                                </div>
+                                                <div class="caption">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed vel velit</p>
+                                                    <ul class="social-line list-inline text-center">
+                                                        <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                                                        <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                                                        <li><a href="#" class="google"><i class="fa fa-google-plus"></i></a></li>
+                                                        <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                                                        <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><div style="width: 255px; margin-right: 30px;" class="owl-item cloned">
+                                        <div>
+                                            <div class="thumbnail no-border no-padding text-center">
+                                                <div class="rehex speaker-avatar">
+                                                    <div class="rehex-deg">
+                                                        <div class="rehex-deg">
+                                                            <div class="rehex-inner">
+                                                                <div class="media">
+                                                                    <img src="~/EM/assets/img/preview/speaker-3.jpg" alt="">
+                                                                    <div class="caption hovered">
+                                                                        <div class="caption-wrapper div-table">
+                                                                            <div class="caption-inner div-cell">
+                                                                                <p class="caption-buttons"><a href="#" class="btn caption-link"><i class="fa fa-link"></i></a></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="caption before-media">
+                                                    <h3 class="caption-title">Speaker name here</h3>
+                                                    <p class="caption-category">Co Founder</p>
+                                                </div>
+                                                <div class="caption">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed vel velit</p>
+                                                    <ul class="social-line list-inline text-center">
+                                                        <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                                                        <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                                                        <li><a href="#" class="google"><i class="fa fa-google-plus"></i></a></li>
+                                                        <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                                                        <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><div style="width: 255px; margin-right: 30px;" class="owl-item">
+                                        <div>
+                                            <div class="thumbnail no-border no-padding text-center">
+                                                <div class="rehex speaker-avatar">
+                                                    <div class="rehex-deg">
+                                                        <div class="rehex-deg">
+                                                            <div class="rehex-inner">
+                                                                <div class="media">
+                                                                    <img src="~/EM/assets/img/preview/speaker-1.jpg" alt="">
+                                                                    <div class="caption hovered">
+                                                                        <div class="caption-wrapper div-table">
+                                                                            <div class="caption-inner div-cell">
+                                                                                <p class="caption-buttons"><a href="#" class="btn caption-link"><i class="fa fa-link"></i></a></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="caption before-media">
+                                                    <h3 class="caption-title">Speaker name here</h3>
+                                                    <p class="caption-category">Co Founder</p>
+                                                </div>
+                                                <div class="caption">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed vel velit</p>
+                                                    <ul class="social-line list-inline text-center">
+                                                        <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                                                        <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                                                        <li><a href="#" class="google"><i class="fa fa-google-plus"></i></a></li>
+                                                        <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                                                        <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><div style="width: 255px; margin-right: 30px;" class="owl-item active">
+                                        <div>
+                                            <div class="thumbnail no-border no-padding text-center">
+                                                <div class="rehex speaker-avatar">
+                                                    <div class="rehex-deg">
+                                                        <div class="rehex-deg">
+                                                            <div class="rehex-inner">
+                                                                <div class="media">
+                                                                    <img src="~/EM/assets/img/preview/speaker-2.jpg" alt="">
+                                                                    <div class="caption hovered">
+                                                                        <div class="caption-wrapper div-table">
+                                                                            <div class="caption-inner div-cell">
+                                                                                <p class="caption-buttons"><a href="#" class="btn caption-link"><i class="fa fa-link"></i></a></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="caption before-media">
+                                                    <h3 class="caption-title">Speaker name here</h3>
+                                                    <p class="caption-category">Co Founder</p>
+                                                </div>
+                                                <div class="caption">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed vel velit</p>
+                                                    <ul class="social-line list-inline text-center">
+                                                        <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                                                        <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                                                        <li><a href="#" class="google"><i class="fa fa-google-plus"></i></a></li>
+                                                        <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                                                        <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><div style="width: 255px; margin-right: 30px;" class="owl-item active">
+                                        <div>
+                                            <div class="thumbnail no-border no-padding text-center">
+                                                <div class="rehex speaker-avatar">
+                                                    <div class="rehex-deg">
+                                                        <div class="rehex-deg">
+                                                            <div class="rehex-inner">
+                                                                <div class="media">
+                                                                    <img src="~/EM/assets/img/preview/speaker-3.jpg" alt="">
+                                                                    <div class="caption hovered">
+                                                                        <div class="caption-wrapper div-table">
+                                                                            <div class="caption-inner div-cell">
+                                                                                <p class="caption-buttons"><a href="#" class="btn caption-link"><i class="fa fa-link"></i></a></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="caption before-media">
+                                                    <h3 class="caption-title">Speaker name here</h3>
+                                                    <p class="caption-category">Co Founder</p>
+                                                </div>
+                                                <div class="caption">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed vel velit</p>
+                                                    <ul class="social-line list-inline text-center">
+                                                        <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                                                        <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                                                        <li><a href="#" class="google"><i class="fa fa-google-plus"></i></a></li>
+                                                        <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                                                        <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><div style="width: 255px; margin-right: 30px;" class="owl-item cloned active">
+                                        <div>
+                                            <div class="thumbnail no-border no-padding text-center">
+                                                <div class="rehex speaker-avatar">
+                                                    <div class="rehex-deg">
+                                                        <div class="rehex-deg">
+                                                            <div class="rehex-inner">
+                                                                <div class="media">
+                                                                    <img src="~/EM/assets/img/preview/speaker-1.jpg" alt="">
+                                                                    <div class="caption hovered">
+                                                                        <div class="caption-wrapper div-table">
+                                                                            <div class="caption-inner div-cell">
+                                                                                <p class="caption-buttons"><a href="#" class="btn caption-link"><i class="fa fa-link"></i></a></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="caption before-media">
+                                                    <h3 class="caption-title">Speaker name here</h3>
+                                                    <p class="caption-category">Co Founder</p>
+                                                </div>
+                                                <div class="caption">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed vel velit</p>
+                                                    <ul class="social-line list-inline text-center">
+                                                        <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                                                        <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                                                        <li><a href="#" class="google"><i class="fa fa-google-plus"></i></a></li>
+                                                        <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                                                        <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><div style="width: 255px; margin-right: 30px;" class="owl-item cloned">
+                                        <div>
+                                            <div class="thumbnail no-border no-padding text-center">
+                                                <div class="rehex speaker-avatar">
+                                                    <div class="rehex-deg">
+                                                        <div class="rehex-deg">
+                                                            <div class="rehex-inner">
+                                                                <div class="media">
+                                                                    <img src="~/EM/assets/img/preview/speaker-2.jpg" alt="">
+                                                                    <div class="caption hovered">
+                                                                        <div class="caption-wrapper div-table">
+                                                                            <div class="caption-inner div-cell">
+                                                                                <p class="caption-buttons"><a href="#" class="btn caption-link"><i class="fa fa-link"></i></a></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="caption before-media">
+                                                    <h3 class="caption-title">Speaker name here</h3>
+                                                    <p class="caption-category">Co Founder</p>
+                                                </div>
+                                                <div class="caption">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed vel velit</p>
+                                                    <ul class="social-line list-inline text-center">
+                                                        <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                                                        <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                                                        <li><a href="#" class="google"><i class="fa fa-google-plus"></i></a></li>
+                                                        <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                                                        <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><div style="width: 255px; margin-right: 30px;" class="owl-item cloned">
+                                        <div>
+                                            <div class="thumbnail no-border no-padding text-center">
+                                                <div class="rehex speaker-avatar">
+                                                    <div class="rehex-deg">
+                                                        <div class="rehex-deg">
+                                                            <div class="rehex-inner">
+                                                                <div class="media">
+                                                                    <img src="~/EM/assets/img/preview/speaker-3.jpg" alt="">
+                                                                    <div class="caption hovered">
+                                                                        <div class="caption-wrapper div-table">
+                                                                            <div class="caption-inner div-cell">
+                                                                                <p class="caption-buttons"><a href="#" class="btn caption-link"><i class="fa fa-link"></i></a></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="caption before-media">
+                                                    <h3 class="caption-title">Speaker name here</h3>
+                                                    <p class="caption-category">Co Founder</p>
+                                                </div>
+                                                <div class="caption">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed vel velit</p>
+                                                    <ul class="social-line list-inline text-center">
+                                                        <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                                                        <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                                                        <li><a href="#" class="google"><i class="fa fa-google-plus"></i></a></li>
+                                                        <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                                                        <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><div class="owl-controls"><div class="owl-nav"><div style="" class="owl-prev"><i class="fa fa-caret-left"></i></div><div style="" class="owl-next"><i class="fa fa-caret-right"></i></div></div><div class="owl-dots" style="display: none;"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Speakers row -->
+                <div class="text-center margin-top">
+                    <a href="#" class="btn btn-theme btn-theme-grey-dark"><i class="fa fa-user"></i> See all speakers</a>
+                </div>
+                <!-- -->
+                <hr class="page-divider line" />
+              
+              
+               
+                <!-- -->
+                <h1 class="section-title">
+                    <span class="icon-inner"><span class="fa-stack"><i class="fa rhex fa-stack-2x"></i><i class="fa fa-ticket fa-stack-1x"></i></span></span>
+                    <span class="title-inner">Register now <small> </small></span>
+                </h1>
+                <form id="registration-form" name="registration-form" class="registration-form registration-form-alt" action="#" method="post">
+                    <div class="row">
+                        <div class="col-sm-12 form-alert"></div>
+                        <div class="col-sm-6 col-md-4">
+                            <div class="form-group with-icon">
+                                <i class="fa fa-user"></i>
+                                <input type="text" class="form-control input-name"
+                                       data-toggle="tooltip" title="Name is required"
+                                       placeholder="Name and Surname" />
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <div class="form-group with-icon">
+                                <i class="fa fa-globe"></i>
+                                <input type="text" class="form-control input-email"
+                                       data-toggle="tooltip" title="Mail is required"
+                                       placeholder="Your Mail Here" />
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <div class="form-group selectpicker-wrapper">
+                                <select class="selectpicker input-price" data-live-search="true" data-width="100%"
+                                        data-toggle="tooltip" title="Select Your Price Tab">
+                                    <option>Select Your Price Tab</option>
+                                    <option>$100</option>
+                                    <option>$200</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-12 overflowed">
+                            <div class="text-center margin-top">
+                                <button class="btn btn-theme btn-theme-xl submit-button" type="submit">
+                                    Register Now <i class="fa fa-arrow-circle-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <!-- -->
+             
+                
+                <hr class="page-divider transparent small" />
+                <!-- -->
+              
+               
+            </section>
+            <!-- /Content -->
+            <hr class="page-divider transparent visible-xs" />
+            <!-- Sidebar -->
+            <aside id="sidebar" class="sidebar col-sm-12 col-md-4 col-lg-3">
+                <div class="widget google-map-widget">
+                    <!-- Google map -->
+                    <div class="google-map">
+                        <div id="map-canvas"></div>
+                    </div>
+                    <!-- /Google map -->
+                    <a href="#" class="link"><i class="fa fa-map-marker"></i> Go to LOCATION</a>
+                </div>
+                <div class="widget">
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingOne">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        When & Where
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                <div class="panel-body">
+                                    <ul>
+                                        <li><a href="#">NYC - Financial Freedom Investor</a></li>
+                                        <li>Madison Ave</li>
+                                        <li>New York, NY 10010</li>
+                                        <li>Thursday, January 8, 2015</li>
+                                        <li>from 6:30 PM to 8:30 PM (EST)</li>
+                                    </ul>
+                                    <a href="#"><i class="fa fa-calendar"></i> Add to My Calendar</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingTwo">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Organizer
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+                                <div class="panel-body">
+                                    <p>Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi.Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis <a href="#">more...</a></p>
+                                    <ul>
+                                        <li><i class="fa fa-facebook"></i> facebook.com/imorganiser</li>
+                                       
+                                        <li><i class="fa fa-globe"></i> http://www.organiserweb.com</li>
+                                    </ul>
+                                    <a href="#" class="btn btn-theme btn-theme-grey-dark btn-theme-md">Send Message <i class="fa fa-plus-circle"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <!-- /Sidebar -->
+        </div>
+    </section>
+    <!-- /PAGE -->
+</div>
+<!-- /Content area -->

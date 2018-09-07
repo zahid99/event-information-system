@@ -1,0 +1,70 @@
+﻿@model EventManagementInformation.Models.EventInfo
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>EventInfo</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.EventTypeId, "EventTypeId", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("EventTypeId", String.Empty)
+                @Html.ValidationMessageFor(model => model.EventTypeId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.EventVenueId, "EventVenueId", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("EventVenueId", String.Empty)
+                @Html.ValidationMessageFor(model => model.EventVenueId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.EventName, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.EventName)
+                @Html.ValidationMessageFor(model => model.EventName)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Details, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Details)
+                @Html.ValidationMessageFor(model => model.Details)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Data, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Data)
+                @Html.ValidationMessageFor(model => model.Data)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
